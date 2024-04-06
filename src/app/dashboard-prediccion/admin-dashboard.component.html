@@ -1,0 +1,109 @@
+<div class="body">
+
+    <br>
+    
+    <form class="my-form" [formGroup]="form" (ngSubmit)="onSubmit()">
+
+        <div class="form-section">
+            <div class="containertitulo">
+                <h6 class="titulo"> FORMULARIO PARA RECOMPILACION DE DATOS </h6>
+            </div>
+            <br><br>
+
+            <label class="text" for="iduser">USERNAME: </label>
+            <input type="text" id="iduser" formControlName="iduser">
+           
+            <br>
+            <label class="text" for="edad">Edad: </label>
+            <input class="list" type="text" id="edad" formControlName="edad">
+            <br>
+            <label class="text" for="genero">Género: </label>
+            <select class="list" id="genero" formControlName="genero">
+                <option *ngFor="let genero of generos" [value]="genero">{{ genero }}</option>
+            </select>
+
+            <label class="text" for="articulo">Articulos: </label>
+            <select class="list" id="articulo" formControlName="articulo">
+                <option *ngFor="let articulo of articulos" [value]="articulo">{{ articulo }}</option>
+            </select>
+
+            <label class="text" for="categoria">Categoria: </label>
+            <select class="list" id="categoria" formControlName="categoria">
+                <option *ngFor="let categoria of categorias" [value]="categoria">{{ categoria }}</option>
+            </select>
+
+            <label class="text" for="precio">Precio En Dolar: </label>
+            <input class="list" type="text" id="precio" formControlName="precio">
+
+            <label class="text" for="ubicacion">Ubicacion: </label>
+            <select class="list" id="ubicacion" formControlName="ubicacion">
+                <option *ngFor="let ubicacion of ubicaciones" [value]="ubicacion">{{ ubicacion }}</option>
+            </select>
+
+            <label class="text" for="tamano">Tamaño: </label>
+            <select class="list" id="tamano" formControlName="tamano">
+                <option *ngFor="let tamano of tamanos" [value]="tamano">{{ tamano }}</option>
+            </select>
+
+            <label class="text" for="color">Color: </label>
+            <select class="list" id="color" formControlName="color">
+                <option *ngFor="let color of colores" [value]="color">{{ color }}</option>
+            </select>
+
+            <label class="text" for="temporada">Temporada: </label>
+            <select class="list" id="temporada" formControlName="temporada">
+                <option *ngFor="let temporada of temporadas" [value]="temporada">{{ temporada }}</option>
+            </select>
+            <label class="text" for="calificacion">Calificación: </label>
+            <input class="caja" type="text" id="calificacion" formControlName="calificacion">
+            <div *ngIf="calificacionControl!.invalid && calificacionControl!.dirty">
+                <div *ngIf="calificacionControl!.errors?.['pattern']">
+                    La calificación debe ser un número entre 1 y 5.
+                </div>
+                <div *ngIf="calificacionControl!.errors?.['required']">
+                    La calificación es obligatoria.
+                </div>
+            </div>
+
+
+            <label for="estadoSub">Suscrito: </label>
+            <select class="list" id="estadoSub" formControlName="estadoSub">
+                <option *ngFor="let estadoSub of estadosSub" [value]="estadoSub">{{ estadoSub }}</option>
+            </select>
+
+
+            <label class="text" for="metododepago">Metodo De Pago: </label>
+            <select class="list" class="select" id="metododepago" formControlName="metododepago">
+                <option *ngFor="let metododepago of metodosPago" [value]="metododepago">{{ metododepago }}</option>
+            </select>
+
+            <label class="text" for="metododeenvio">Metodo De Envio: </label>
+            <select class="list" id="metododeenvio" formControlName="metododeenvio">
+                <option *ngFor="let metododeenvio of metodosEnvio" [value]="metododeenvio">{{ metododeenvio }}</option>
+            </select>
+
+            <label class="text" for="descuento">Descuento: </label>
+            <select class="list" id="descuento" formControlName="descuento">
+                <option *ngFor="let descuento of descuentos" [value]="descuento">{{ descuento }}</option>
+            </select>
+
+            <label class="text" for="usocodigo">Se Uso Codigo Promocional: </label>
+            <select class="list" id="usocodigo" formControlName="usocodigo">
+                <option *ngFor="let usocodigo of usosCodigo" [value]="usocodigo">{{ usocodigo}}</option>
+            </select>
+
+            <label class="text" for="compraranteriores">Numero De Compras Anteriores </label>
+            <input type="text" id="compraranteriores" formControlName="compraranteriores">
+
+
+            <label class="text" for="metodopagopreferido">Metodo De Pago Preferido: </label>
+            <select class="list" id="metodopagopreferido" formControlName="metodopagopreferido">
+                <option *ngFor="let metodopagopreferido of metodosPagoPreferidos" [value]="metodopagopreferido">{{
+                    metodopagopreferido}}</option>
+            </select>
+
+
+            <button id="enviar" type="submit">Enviar</button>
+        </div>
+    </form>
+</div>

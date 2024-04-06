@@ -1,0 +1,69 @@
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1 class="h2 text-light">Reporte de Resumenes</h1>
+    <div class="btn-toolbar mb-2 mb-md-0">
+        <div class="btn-group me-2">
+            
+            <button type="button" (click)=" exportToPDF()">Exportar a PDF</button>
+        </div>
+    </div>
+</div>
+
+<h5 class="text-light">Resumenes y conversiones</h5>
+<div class="table-responsive small">
+    <table class="table table-dark table-sm">
+        <thead>
+            <tr>
+                <th scope="col">#Rg</th>
+                <th scope="col">ID</th>
+                <th scope="col">AGE</th>
+                <th scope="col">GENDER</th>
+                <th scope="col">ITEM PURCHASED</th>
+                <th scope="col">CATEGORY</th>
+                <th scope="col">DOLAR</th>
+                <th scope="col">LOCATION</th>
+                <th scope="col">SIZE</th>
+                <th scope="col">COLOR</th>
+                <th scope="col">SEASON</th>
+                <th scope="col">RATING</th>
+                <th scope="col">SUBS</th>
+                <th scope="col">PAYMENT METHOD</th>
+                <th scope="col">SHIPPING TYPE</th>
+                <th scope="col">DISCOUNT</th>
+                <th scope="col">CODE USED</th>
+                <th scope="col">PRE-PURCH</th>
+                <th scope="col">PREFERRED-PM</th>
+                <th scope="col">PREDICTION</th>
+                <th scope="col">DATE REGISTER</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of datosTabla">
+                <td>{{ item.Register }}</td>
+                <td>{{ item.CustomerID }}</td>
+                <td>{{ item.Age }}</td>
+                <td>{{ item.Gender }}</td>
+                <td>{{ item.ItemPurchased }}</td>
+                <td>{{ item.Category}}</td>
+                <td>{{ item.PurchaseAmount}}</td>
+                <td>{{ item.Location}}</td>
+                <td>{{ item.Size }}</td>
+                <td>{{ item.Color}}</td>
+                <td>{{ item.Season}}</td>
+                <td>{{ item.ReviewRating}}</td>
+                <td>{{ item.SubscriptionStatust}}</td>
+                <td>{{ item.PaymentMethod }}</td>
+                <td>{{ item.ShippingType }}</td>
+                <td>{{ item.DiscountApplied }}</td>
+                <td>{{ item.PromoCodeUsed }}</td>
+                <td>{{ item.PreviousPurchases }}</td>
+                <td>{{ item.PreferredPaymentMethod}}</td>
+                <td>{{ item.Prediction}}</td>
+                <td>{{ item.DateRegister}}</td>
+
+
+
+
+            </tr>
+        </tbody>
+    </table>
+</div>

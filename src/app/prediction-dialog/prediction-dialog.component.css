@@ -1,0 +1,34 @@
+/* Estilos para el cuadro de diálogo personalizado */
+.mi-dialogo-estilizado {
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  }
+  
+  /* Estilos para el título del cuadro de diálogo */
+  .mi-dialogo-estilizado .mat-dialog-title {
+    color: #164863; /* Color del título */
+    font-size: 24px; /* Tamaño del título */
+    font-weight: bold; /* Texto en negrita */
+  }
+  
+  /* Estilos para el contenido del cuadro de diálogo */
+  .mi-dialogo-estilizado .mat-dialog-content p {
+    font-size: 16px; /* Tamaño del contenido */
+    line-height: 1.5; /* Altura de línea */
+  }
+  
+  /* Estilos para los botones de acción del cuadro de diálogo */
+  .mi-dialogo-estilizado .mat-dialog-actions  {
+    background-color: #164863; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px 20px; /* Relleno interno del botón */
+    cursor: pointer; /* Cursor de puntero al pasar el ratón */
+    transition: background-color 0.3s; /* Transición de color de fondo */
+  }
+  
+   .mat-dialog-actions #button:hover {
+    background-color: #2980b9; /* Cambio de color de fondo al pasar el ratón sobre el botón */
+  }
+  

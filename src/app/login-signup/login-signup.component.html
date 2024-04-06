@@ -1,0 +1,30 @@
+<div class="container-custom">
+    <div class="top"></div>
+    <div class="bottom"></div>
+    <div class="center">
+        <div class="main">
+            <input type="checkbox" id="chk" aria-hidden="true">
+
+            <div class="signup">
+                <form name="RegisterForm" (ngSubmit)="to_signup()">
+                    <label for="chk" aria-hidden="true">Sign up</label>
+                    <input type="text" placeholder="Nombre" [(ngModel)]="registerUsername" name="registerUsername" required>
+                  
+                    <input type="password" placeholder="Password" [(ngModel)]="registerPswd" name="registerPswd" required>
+                    <input id="check" type="checkbox" [(ngModel)]="acceptTerms" name="acceptTerms" required>
+                    <label id="tx" name="tx " for="tx"> Acepto los términos y condiciones</label>
+                    
+                    <button type="submit"[disabled]="!acceptTerms">Signup</button>
+                </form>
+            </div>
+            <div class="login">
+                <form name="LoginForm" (ngSubmit)="abrirUser()">
+                    <label for="chk" aria-hidden="true">Login</label>
+                    <input type="email" [(ngModel)]="Username" name="Username" placeholder="Username" required>
+                    <input type="password" [(ngModel)]="Pswd" name="Pswd" placeholder="Password" required>
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

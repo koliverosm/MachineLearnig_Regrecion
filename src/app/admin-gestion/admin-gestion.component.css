@@ -1,0 +1,52 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f0f0f071; /* Color de fondo del cuerpo según tu preferencia */
+  }
+  
+  /* Estilos para el formulario */
+  .formregis {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff; /* Fondo blanco */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Estilos para los elementos del formulario */
+  .texto {
+    display: block;
+    font-weight: bold;
+    color: #333; /* Color del texto */
+    margin-bottom: 8px;
+  }
+  
+  .cajatexto,
+  .list {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #b7c3ca;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  /* Estilos para el botón */
+  .bnt {
+    background-color: #164863; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px 20px; /* Relleno interno del botón */
+    cursor: pointer; /* Cursor de puntero al pasar el ratón */
+    transition: background-color 0.3s; /* Transición de color de fondo */
+  }
+  
+  .bnt:hover {
+    background-color: #2980b9; /* Cambio de color de fondo al pasar el ratón sobre el botón */
+  }
+  

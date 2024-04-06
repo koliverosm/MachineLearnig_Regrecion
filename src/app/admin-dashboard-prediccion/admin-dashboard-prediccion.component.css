@@ -1,0 +1,128 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f0f0f071; /* Cambia el color de fondo del cuerpo según tu preferencia */
+  }
+  
+  .titulo {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0; /* Elimina el margen predeterminado del encabezado */
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: aliceblue;
+    line-height: 1.5;
+  }
+  .containertitulo {
+    background-color: #164863;
+    padding: 20px;
+    border-radius: 15px; /* Agrega bordes redondos */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada para dar efecto 3D */
+}
+  
+  .my-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: transparent; /* Fondo transparente */
+    padding: 10px; /* Agregamos un espacio interno al formulario */
+  }
+  
+  /* Estilos para cada sección del formulario */
+  .form-section {
+    flex-basis: calc(70% - 20px);
+    margin: 10px;
+    background-color:#164863; /* Fondo blanco con opacidad */
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+  }
+  
+  /* Estilos para todos los elementos dentro de una sección */
+  .form-section label {
+    display: block;
+    font-weight: bold;
+    color: #fff; /* Texto blanco */
+    margin-bottom: 8px;
+  }
+  
+  .form-section select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #b7c3ca;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom: 15px; /* Aumentamos el margen inferior para mayor separación */
+    background-color:#164863 ; /* Fondo transparente */
+    color: #fcfcfc; /* Texto blanco */
+    border: 1px solid #fff; /* Borde blanco */
+  }
+
+  .form-section .caja {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #b7cab7;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom: 15px; 
+    background-color: #164863;
+    color: #f5f1f1; 
+    border: 1px solid #fff; 
+    transition: background-color 0.3s ease; 
+  }
+ 
+  .form-section input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #b7cab7;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom: 15px; 
+    background-color: #164863; 
+    color: #f5f1f1; 
+    border: 1px solid #fff; /* Borde blanco */
+    transition: background-color 2s ease;
+  }
+
+  .form-section input:focus {
+    background-color: #164863; /* Mantenemos el fondo deseado cuando el campo está enfocado */
+    color: #f5f1f1; /* Ajustamos el color del texto cuando el campo está enfocado */
+    border: 1px solid #fff; /* Borde blanco */
+  }
+  
+  /* Estilos específicos para el botón Enviar */
+  .enviar {
+    background-color: #164863;
+    color: #fff;
+    padding: 10px 20px;
+    border: 1px solid #f8f8f8; /* Cambia el color del borde a blanco */
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .enviar:hover {
+    background-color: #0e476d;
+    border-color: #3f393923; /* Cambia el color del borde al hacer hover */
+  }
+  
+  
+  /* Estilos para pantallas pequeñas */
+  @media only screen and (max-width: 768px) {
+    .form-section {
+      flex-basis: 100%;
+    }
+  }
+  
+  .pr {
+    color: #c8e2f0;
+  }
+  
+  .sn {
+    
+    color: #e0e8ec;
+  }

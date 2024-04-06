@@ -1,0 +1,64 @@
+<header class="navbar sticky-top bg-dark flex-md-nowrap p-0 shadow" data-bs-theme="dark">
+    <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6 text-white" href="#">CULCOOL</a>
+
+    <ul class="navbar-nav flex-row d-md-none">
+        <li class="nav-item text-nowrap">
+            <button class="nav-link px-3 text-white" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false"
+                aria-label="Toggle navigation">
+                ☰
+            </button>
+        </li>
+    </ul>
+</header>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="sidebar col-md-3 col-lg-2 p-0 bg-custom">
+            <div class="offcanvas-md offcanvas-end" tabindex="-1" id="sidebarMenu" aria-labelledby="sidebarMenuLabel">
+                <div class="offcanvas-body d-md-flex flex-column p-0 pt-lg-3 overflow-y-auto bg-custom">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link d-flex align-items-center gap-2" routerLink="/admin/admin-regresion-lineal"
+                                routerLinkActive="active" aria-current="page" href="#">
+                                Resultado de Google Colab
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link d-flex align-items-center gap-2" routerLink="/admin/admin-dashboard-prediccion"
+                                routerLinkActive="active" aria-current="page" href="#">
+                                Prediccion
+                            </a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link d-flex align-items-center gap-2" routerLink="/admin/admin-report"
+                                routerLinkActive="active">
+                                Historial del Prediccines
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link d-flex align-items-center gap-2" routerLink="/admin/admin-gestion"
+                                routerLinkActive="active">
+                                Gestion De Usuarios
+                            </a>
+                        </li>
+                    </ul>
+
+                    <hr class="my-3">
+
+                    <ul class="nav flex-column mb-auto">
+                        <li class="nav-item">
+                            <a class="nav-link d-flex align-items-center gap-2" (click)="cerrarSesion()"routerLink="/login-signup">
+                                Cerrar sesión
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+            <router-outlet></router-outlet>
+        </main>
+    </div>
+</div>

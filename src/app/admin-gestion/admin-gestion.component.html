@@ -1,0 +1,59 @@
+<br><br><br>
+
+<div class="body">
+
+  <form class="formregis" [formGroup]="formulario" (ngSubmit)="enviarFormulario()">
+    <label class="texto" for="nombreusuario">Nombre De Usuario:</label>
+    <input class="cajatexto" type="username" id="username" formControlName="username">
+
+    <label class="texto" for="contrasena">Contraseña:</label>
+    <input class="cajatexto" type="password" id="contrasena" formControlName="password">
+
+    <label class="texto" for="rol">Rol:</label>
+    <select class="list" id="rol" formControlName="rol" required>
+      <option value="" disabled selected>Seleccione un rol</option>
+      <option value="user">User</option>
+      <option value="admin">Admin</option>
+    </select>
+
+    <label class="texto" for="accion">Acción:</label>
+    <select class="list" id="accion" formControlName="statu">
+      <option value="" disabled selected>Seleccione una acción</option>
+      <option value="activo">Activo</option>
+      <option value="inactivo">Inactivo</option>
+    </select>
+
+    <button class="bnt" type="submit">Enviar</button>
+  </form>
+  <br><br>
+  <div class="containerTable">
+    <table class="table table-dark table-sm">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">NOMBRE DE USUARIO</th>
+          <th scope="col">CONTRASEÑA</th>
+          <th scope="col">ROL</th>
+          <th scope="col">FECHA</th>
+  
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of datosUsuarioTabla">
+          <td>{{ item.id }}</td>
+          <td>{{ item.username }}</td>
+          <td>{{ item.password }}</td>
+          <td>{{ item.roles }}</td>
+          <td>{{ item.date }}</td>
+          
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  
+
+
+
+
+</div>
